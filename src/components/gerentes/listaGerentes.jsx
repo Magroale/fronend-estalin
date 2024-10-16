@@ -1,5 +1,9 @@
-export const Gerente = () => {
+import {Gerente} from "./gerente.jsx";
+
+export const GerenteView = () => {
   return (
-    <div>Holi</div>
+    <>
+    <Gerente/>
+    </>
   )
 }

@@ -1,6 +1,6 @@
 // import RolGerente from "./components/listaGerentes.jsx";
 import Login from "./components/login/login.jsx";
-import {Gerente} from "./components/gerentes/listaGerentes.jsx";
+import {GerenteView} from "./components/gerentes/listaGerentes.jsx";
 import Coordinador from './components/coordinadores/coordinadores.jsx';
 import { ListaContadores } from "./components/contadores/contadores.jsx";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
@@ -15,7 +15,7 @@ const AppPrincipal = () => {
           path="/gerentes"
           element={
             <ProtectedRoute allowedRoles={["Gerente"]}>
-              <Gerente />
+              <GerenteView />
             </ProtectedRoute>
           }
         />
