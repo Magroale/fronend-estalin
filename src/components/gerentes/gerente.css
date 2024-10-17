@@ -1,0 +1,110 @@
+.main-2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180vw;   /* Ancho completo de la ventana */
+    height: 150vh;  /* Altura completa de la ventana */
+    padding: 40px;  /* Espaciado opcional alrededor */
+    box-sizing: border-box; /* Incluye el padding dentro de las dimensiones */
+}
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f9fa; /* Ajusta este color si lo deseas */
+  }
+  
+  .company-image {
+    max-width: 150px; /* Limita el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
+  }
+  
+  .company-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+  }
+  
+  .header-title {
+    font-size: 1.5rem; /* Ajusta el tamaño del título según tu necesidad */
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .company-image {
+      max-width: 100px; /* Reduce el tamaño en pantallas más pequeñas */
+    }
+  
+    .header-title {
+      font-size: 1.2rem; /* Ajusta el tamaño del título en pantallas pequeñas */
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+  body{
+    background:#CDDC39;
+    font-family: 'Arimo', sans-serif;
+  }
+  h2{
+    color:#000;
+    text-align:center;
+    font-size:2em;
+  }
+  .warpper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab{
+    cursor: pointer;
+    padding:10px 20px;
+    margin:0px 2px;
+    background:#000;
+    display:inline-block;
+    color:#fff;
+    border-radius:3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+  }
+  .panels{
+    background:#fffffff6;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height:200px;
+    width:100%;
+    max-width:500px;
+    border-radius:3px;
+    overflow:hidden;
+    padding:20px;  
+  }
+  .panel{
+    display:none;
+    animation: fadein .8s;
+  }
+  @keyframes fadein {
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+  }
+  .panel-title{
+    font-size:1.5em;
+    font-weight:bold
+  }
+  .radio{
+    display:none;
+  }
+  #one:checked ~ .panels #one-panel,
+  #two:checked ~ .panels #two-panel,
+  #three:checked ~ .panels #three-panel{
+    display:block
+  }
+  #one:checked ~ .tabs #one-tab,
+  #two:checked ~ .tabs #two-tab,
+  #three:checked ~ .tabs #three-tab{
+    background:#fffffff6;
+    color:#000;
+    border-top: 3px solid #000;
+  }

@@ -1,4 +1,4 @@
-import {Gerente} from "./gerente.jsx";
+import Gerente from "./gerente.jsx";
 
 export const GerenteView = () => {
   return (
